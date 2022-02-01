@@ -5,10 +5,11 @@ b: Exericses<br>
 <hr>
 <br>
 00_about-nlp<br>
-01_acquisition<br>
-02_preparation<br>
-03_exploration<br>
-04_modeling<br>
-05_project<br>
+01_regex<br>
+02_acquisition<br>
+03_preparation<br>
+04_exploration<br>
+05_modeling<br>
+06_project<br>
 <hr>
 <br>
