@@ -7,10 +7,9 @@ b: Exericses<br>
 00_about-nlp<br>
 01_regex<br>
 02_acquisition<br>
-- Get = download
-- Post = upload
-- `BeautifulSoup()` used to parse HTML text
-- 
+- Get = download<br>
+- Post = upload<br>
+- `BeautifulSoup()` used to parse HTML text<br>
 03_preparation<br>
 04_exploration<br>
 05_modeling<br>
