@@ -40,7 +40,7 @@ def basic_clean(string):
 
 # *****************************************************************************************************
 
-    def tokenize(string):
+def tokenize(string):
     '''
     This function takes in a string and returns the tokenized version of that string.
     '''
@@ -55,7 +55,7 @@ def basic_clean(string):
 
 # *****************************************************************************************************
 
-    def stem(string):
+def stem(string):
     '''
     This function takes in a string, stems each individual word, and then joins
     the stem words back together in the returned string.
@@ -74,7 +74,7 @@ def basic_clean(string):
 
 # *****************************************************************************************************
 
-    def lemmatize(string):
+def lemmatize(string):
     '''
     This function takes in a string of words, creates a lemmatization object that is applied to 
     each individual word in the string, and then rejoined the split list of lemma string words to
@@ -113,8 +113,8 @@ def remove_stopwords(string):
     # joining the list of words back to a string of words
     filtered_string = ' '.join(filtered_words)
     
-    # printing number of words removed
-    print(f'Removed {len(string) - len(filtered_string)} stop words.\n> Original string: {len(string)}\n> New string: {len(filtered_string)}')
-    print()
+    # # printing number of words removed
+    # print(f'Removed {len(string) - len(filtered_string)} stop words.\n> Original string: {len(string)}\n> New string: {len(filtered_string)}')
+    # print()
     
     return filtered_string

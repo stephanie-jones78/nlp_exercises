@@ -18,7 +18,7 @@ def get_front_page_links():
     page.
     """
     response = requests.get("https://codeup.com/blog/", headers={"user-agent": "Codeup DS"})
-    soup = BeautifulSoup(response.text)
+    soup = BeautifulSoup(response.text, 'html.parser')
     links = [link.attrs["href"] for link in soup.select(".more-link")]
 
     return links
@@ -26,7 +26,7 @@ def get_front_page_links():
 def parse_codeup_blog_article(url):
     "Given a blog article url, extract the relevant information and return it as a dictionary."
     response = requests.get(url, headers={"user-agent": "Codeup DS"})
-    soup = BeautifulSoup(response.text)
+    soup = BeautifulSoup(response.text, 'html.parser')
     return {
         "title": soup.select_one(".entry-title").text,
         "published": soup.select_one(".published").text,
@@ -59,7 +59,7 @@ def parse_inshorts_page(url):
     Infers the category from the last section of the url.'''
     category = url.split('/')[-1]
     response = requests.get(url, headers={'user-agent': 'Codeup DS'})
-    soup = BeautifulSoup(response.text)
+    soup = BeautifulSoup(response.text, 'html.parser')
     cards = soup.select('.news-card')
     df = pd.DataFrame([parse_news_card(card) for card in cards])
     df['category'] = category
